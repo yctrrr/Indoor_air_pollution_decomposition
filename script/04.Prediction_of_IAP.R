@@ -104,7 +104,7 @@ for (y in 2000:2020) {
                    .x[Condition == "N-H"]*(1-hd_f[Condition == "H"]))%>%
     ungroup()%>%mutate(year = yl)
 
-  ## covert data frame to long format
+  ## convert data frame to long format
   IPM25_grid <- 1:6%>%purrr::map_dfr(function(t){
     expo_type <- c("IAP_UCl","IAP_UB","IAP_UC","IAP_UCl","IAP_RB","IAP_RC")
     area_type <- c(rep("Urban",3),rep("Rural",3))
